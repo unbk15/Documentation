@@ -11,11 +11,5 @@ Steps to add a repo to the GitHub
 This should be it :)
 
 
-<========= CSS =========>
-
-Adding prefixes for older browsers
-
-http://leaverou.github.io/prefixfree/
-
 
 
