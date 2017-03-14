@@ -1,2 +1,5 @@
 
 =====Smooth scrolling===
+http://css-tricks.com/snippets/jquery/smooth-scrolling
+
+
