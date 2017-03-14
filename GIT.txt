@@ -10,3 +10,8 @@ Steps to add a repo to the GitHub
 -git push -u origin master
 
 This should be it :)
+
+git commands 
+
+-git checkout . -revert the changes that you made before comminting and pushing the code.
+
