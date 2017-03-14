@@ -1,0 +1,8 @@
+
+Create Project
+
+1.npm install -g angular-cli (Install it Globaly)
+2.ng new first-app(in the folder where do you want to create the project)
+3.ng serve (start the server)
+
+Install npm install typescript -g
