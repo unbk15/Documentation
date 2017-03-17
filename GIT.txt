@@ -13,5 +13,10 @@ This should be it :)
 
 git commands 
 
--git checkout . -revert the changes that you made before comminting and pushing the code.
+-git checkout . -revert the changes that you made before comminting and pushing the code on a branch.
+
+-CONSULTIX
+ 1.pull from stefan branch
+ 2.git checkout -b ilie-animation
+
 
