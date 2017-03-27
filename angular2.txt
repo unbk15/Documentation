@@ -26,3 +26,7 @@ ng g e my-new-enum: add an enum to your application
 ng g m my-new-module: add a module to your application
 ng g p my-new-pipe: add a pipe to your application
 ng g s my-new-service: add a service to your application
+
+//Changing the port of the project 
+
+-ng serve -p 4300;
