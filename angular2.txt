@@ -33,4 +33,7 @@ ng g s my-new-service: add a service to your application
 
 Adding pop up in angular2
 
-https://github.com/shlomiassaf/angular2-modal/blob/master/QUICKTHROUGH.md
+Installation
+-https://github.com/shlomiassaf/angular2-modal/blob/master/QUICKTHROUGH.md
+Custom Modal
+-http://shlomiassaf.github.io/angular2-modal/#/bootstrap-demo/customizeModals
