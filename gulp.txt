@@ -1,0 +1,8 @@
+tutorial : https://css-tricks.com/gulp-for-beginners/
+
+Running Gulp on a Project
+
+-npm install gulp -g
+-create folder for gulpProject
+-npm init (create package.json)
+-npm install gulp --save-dev
