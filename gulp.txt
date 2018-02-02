@@ -6,3 +6,6 @@ Running Gulp on a Project
 -create folder for gulpProject
 -npm init (create package.json)
 -npm install gulp --save-dev
+------------- something---------------
+-gulp watch (gulp - to watch the filles)
+-gulp build (to build the process)
