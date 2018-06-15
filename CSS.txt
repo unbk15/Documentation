@@ -22,7 +22,9 @@ Set Sass Development Tools
 "compile:sass": "node-sass sass/main.scss css/style.css -w"
 run this comand from the terminal : npm run compile:sass
 npm install live-server -g
--from the project folder run live-server
+-from the project folder:
+ 1) npm run compile:sass
+ 2)run live-server
 
 
 
