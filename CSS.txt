@@ -2,3 +2,14 @@
 
 Adding prefixes for older browsers
 -http://leaverou.github.io/prefixfree/
+=============================
+CSS ADVANCED
+============================
+--------------
+Resourcess
+---------------
+  https://bennettfeely.com/clippy/
+------------
+Properties
+------------
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
