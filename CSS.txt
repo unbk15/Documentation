@@ -13,3 +13,12 @@ Resourcess
 Properties
 ------------
 clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+
+------------------
+Lecture
+------------------
+The three pillars to write good Css and Html ... and Build Good Websites
+
+Rsponsive design
+Maintainnable and scalable code
+Web Performance
