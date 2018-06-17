@@ -4,14 +4,19 @@ Adding prefixes for older browsers
 -http://leaverou.github.io/prefixfree/
 
 =====================================
-Advance CSS 
+ADVANCE CSS
 =====================================
 
-Resourcess 
+------------------
+Resourceouss
+------------------
 
-https://bennettfeely.com/clippy/
+clip-path : https://bennettfeely.com/clippy/
+icons: http://linea.io/
 
+====================================
 Set Sass Development Tools
+====================================
 
 -install Node
 -come in the folder where the project is set up
