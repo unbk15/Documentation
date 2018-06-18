@@ -13,6 +13,7 @@ Resourceouss
 
 clip-path : https://bennettfeely.com/clippy/
 icons: http://linea.io/
+great covers : http://coverr.co/
 
 ====================================
 Set Sass Development Tools
