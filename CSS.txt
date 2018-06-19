@@ -15,6 +15,7 @@ clip-path : https://bennettfeely.com/clippy/
 icons: http://linea.io/
 great covers : http://coverr.co/
 bezier-curve : easing.net
+screen-resolution: http://gs.statcounter.com/screen-resolution-stats
 
 ====================================
 Set Sass Development Tools
