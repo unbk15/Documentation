@@ -16,7 +16,7 @@ icons: http://linea.io/
 great covers : http://coverr.co/
 bezier-curve : easing.net
 screen-resolution: http://gs.statcounter.com/screen-resolution-stats
-Css Properties : 
+Css Properties : caniuse.com
 
 ====================================
 Set Sass Development Tools
