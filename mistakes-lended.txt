@@ -1,6 +1,21 @@
 =====================
-  Mistakes in PHP
+  Mistakes in Lended 
  ====================
  
- 1. The email recived from the client, does not have a email normal readable structure.
- 2.
+ 1. The email recived from the client, does not have an email normal readable structure.
+ About Page
+    -the text over the background image is black an between the resolutions of (1800px - 1200px) is not readable
+    -the size of the text too smaller on mobile.
+ Home Page, Provider Page, Borrower Page
+      - no yellow-arrow on the get lended button
+      - the color of the input placeholders is not black and bold.
+      - the text and the form over th background image is black and between the resolutions(1700px - 1200px) is not visible.
+      - between the resoution (640px - 1200px) - she got lended and i got a new patient is not correct allign under the yellow arrow in the above green-box.
+      -under the resolutin of (640px) the switcher icons are not correct align with the form under them.
+      -not the appropriate font-size on tablet and mobile.
+
+  Provider Page, Borrower Page
+       - the form does not have the appropriate width on tablet.
+      
+     
+      
