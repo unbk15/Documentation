@@ -2,4 +2,5 @@
   Mistakes in PHP
  ====================
  
- 1.dsdsd
+ 1. The email recived from the client, does not have a email normal readable structure.
+ 2.
