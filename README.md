@@ -1,3 +1,3 @@
 # GitDocumentation
 
-A summery of some of my interests subjects.
+A summary of some of my interests subjects.
