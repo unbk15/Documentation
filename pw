@@ -1,0 +1,24 @@
+==================================================================================================================================
+METHODS
+==================================================================================================================================
+
+1. Return all pages which are children of a specific template: $pages->find('parent.template=region')
+
+==================================================================================================================================
+MODULES
+==================================================================================================================================
+
+1.Search Engine: Search Engine GitHub Link :https://github.com/teppokoivula/SearchEngine
+2.How to enable Honeypot field in Comments Form for anti-spam
+https://processwire.com/talk/topic/21923-how-to-enable-honeypot-field-in-comments-form-for-anti-spam/
+3.Login/Register: https://modules.processwire.com/modules/login-register/
+4.WireMailRouter: https://modules.processwire.com/modules/wire-mail-router/
+5.TextformatterExternalRedirect: https://github.com/BitPoet/TextformatterExternalRedirect
+6.MarkupContentSecurityPolicy: Mozila Observatory 
+7.TextformatterVideoEmbed: http://modules.processwire.com/modules/textformatter-video-embed/
+
+==================================================================================================================================
+TO STUDY
+==================================================================================================================================
+
+1.Hooks
