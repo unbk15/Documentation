@@ -16,6 +16,7 @@ https://processwire.com/talk/topic/21923-how-to-enable-honeypot-field-in-comment
 5.TextformatterExternalRedirect: https://github.com/BitPoet/TextformatterExternalRedirect
 6.MarkupContentSecurityPolicy: Mozila Observatory 
 7.TextformatterVideoEmbed: http://modules.processwire.com/modules/textformatter-video-embed/
+8.TextformatterWebpImages: http://modules.processwire.com/modules/textformatter-webp-images/
 
 ==================================================================================================================================
 TO STUDY
