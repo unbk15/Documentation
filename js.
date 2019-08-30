@@ -1,0 +1,174 @@
+===========================================================
+METHODES ON ARRAYS
+===========================================================
+------------------------------------------------------------------------------------------------------------
+1)toString() - converts an array to a string separated by coma.
+------------------------------------------------------------------------------------------------------------
+
+let colors = ['green', 'yellow', 'blue'];
+console.log(colors.toString()); // green,yellow,blue
+
+-------------------------------------------------------------------------------------------------------------
+2) join() - combines all array elements into a string similar to toString(), 
+            but you can specify the separator instead of default comma
+-------------------------------------------------------------------------------------------------------------
+
+let colors = ['green', 'yellow', 'blue'];
+console.log(colors.join('-')); // green-yellow-blue
+
+--------------------------------------------------------------------------------------------------------------
+3) concat() - combines two arrays together or add more items to an array and then return the new array
+--------------------------------------------------------------------------------------------------------------
+
+let firstNumbers = [1, 2, 3];
+let secondNumbers = [4, 5, 6];
+let merged = firstNumbers.concat(secondNumbers);
+console.log(merged); // [1, 2, 3, 4, 5, 6]
+
+--------------------------------------------------------------------------------------------------------------
+4) push() - add items to the end of the array and change the original array
+-------------------------------------------------------------------------------------------------------------
+
+let browsers = ['chrome', 'firefox', 'edge'];
+browsers.push('safari', 'opera mini');
+console.log(browsers); 
+// ["chrome", "firefox", "edge", "safari", "opera mini"]
+
+---------------------------------------------------------------------------------------------------------------
+5) pop() - this method removes the last items from an array and return it
+---------------------------------------------------------------------------------------------------------------
+
+let browsers = ['chrome', 'firefox', 'edge'];
+browsers.pop(); // "edge"
+console.log(browsers); // ["chrome", "firefox"]
+
+---------------------------------------------------------------------------------------------------------------
+6) shift() - removes the first item from an array and return it
+---------------------------------------------------------------------------------------------------------------
+
+let browsers = ['chrome', 'firefox', 'edge'];
+browsers.shift(); // "chrome"
+console.log(browsers); // ["firefox", "edge"]
+
+---------------------------------------------------------------------------------------------------------------
+7) unshift() - this method adds one or more items at the begining of the array and modify the original array
+---------------------------------------------------------------------------------------------------------------
+
+let browsers = ['chrome', 'firefox', 'edge'];
+browsers.unshift('safari');
+console.log(browsers); //  ["safari", "chrome", "firefox", "edge"]
+
+---------------------------------------------------------------------------------------------------------------
+8) splice() - this method changes an array by adding, removing, inserting elements
+---------------------------------------------------------------------------------------------------------------
+
+array.splice(index[deleteCount, element1, elementN]);
+- index - starting point to remove elements.
+- deleteCount - the number of element that will be deleted starting from the inserted index
+- element1, elementN - is the element(s) to be added
+
+a)Removing Elements - after running slice, it returns the array with the items removed and does not remove from the original array
+
+let colors = ['green', 'yellow', 'blue', 'purple'];
+colors.splice(0, 3);
+console.log(colors); // ['green', 'yellow', 'blue', 'purple']
+// deletes ["green", "yellow", "blue"]
+
+b) Removing all elements after the index - if no second argument is declared, the method will delete the entire part of the array 
+                                         - afects the original array
+  let colors = ['green', 'yellow', 'blue', 'purple'];
+  colors.splice(3);
+  console.log(colors); // ["green", "yellow", "blue"]
+  // deletes ['purple']
+  
+ c) Removing some elements and replace them with others
+ 
+ let schedule = ['I', 'have', 'a', 'meeting', 'tommorrow'];
+// removes 4 first elements and replace them with another
+schedule.splice(0, 4, 'we', 'are', 'going', 'to', 'swim');
+console.log(schedule); 
+// ["we", "are", "going", "to", "swim", "tommorrow"]
+
+d)Adding Item - we have to set the deleteCount = 0
+
+let schedule = ['I', 'have', 'a', 'meeting', 'with'];
+// adds 3 new elements to the array
+schedule.splice(5, 0, 'some', 'clients', 'tommorrow');
+console.log(schedule); 
+// ["I", "have", "a", "meeting", "with", "some", "clients", "tommorrow"]
+------------------------------------------------------------------------------------------------------------------
+9) slice() - it returns subarrays;
+          - copy a specific part of the array and return that part as an array, without changing the parent array
+          - array.slice(start, end);
+------------------------------------------------------------------------------------------------------------------
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let threenumbers = numbers.slice(0, 3);
+console.log(threenumbers);
+------------------------------------------------------------------------------------------------------------------
+10) split() - it is used for strings, it divides a string into substrings and returns them as array
+            - split(separator, limit);
+------------------------------------------------------------------------------------------------------------------
+
+    let firstName = "hello, my name is bolaji, I am a dev";
+    console.log(firstName.split(",", 2)); 
+    
+    let firstName = 'Bolaji';
+    firstName.split('') // ["B", "o", "l", "a", "j", "i"]
+    
+---------------------------------------------------------------------------------------------------------------------
+11) indexOf() - looks for an item in an array and return the index where it was found if it was not found return -1
+----------------------------------------------------------------------------------------------------------------------
+
+let fruits = ['apple', 'orange', false, 3]
+fruits.indexOf('orange'); // returns 1
+fruits.indexOf(3); // returns 3
+friuts.indexOf(null); // returns -1 (not found)
+
+----------------------------------------------------------------------------------------------------------------------
+12) lastIndexOf() - this method works exactly as indexOf but it works from right to left, returns the last index where the item was found
+----------------------------------------------------------------------------------------------------------------------
+
+let fruits = ['apple', 'orange', false, 3, 'apple']
+fruits.lastIndexOf('apple'); // returns 4
+
+-----------------------------------------------------------------------------------------------------------------------
+13) filter() - creates a new array if a certain condition is passed 
+-----------------------------------------------------------------------------------------------------------------------
+
+let results = array.filter(function(item, index, array) {
+  // returns true if the item passes the filter
+});
+
+const countryCode = ['+234', '+144', '+233', '+234'];
+const nigerian = countryCode.filter( code => code === '+234');
+console.log(nigerian); // ["+234", "+234"]
+
+-----------------------------------------------------------------------------------------------------------------------
+14) map() - creates a new array by manipulationg the values in the array
+-----------------------------------------------------------------------------------------------------------------------
+
+const userNames = ['tina', 'danny', 'mark', 'bolaji'];
+const display = userNames.map(item => {
+return '<li>' + item + '</li>';
+})
+const render = '<ul>' + display.join('') + '</ul>';
+document.write(render);
+
+// adds dollar sign to numbers
+const numbers = [10, 3, 4, 6];
+const dollars = numbers.map( number => '$' + number);
+console.log(dollars);
+// ['$10', '$3', '$4', '$6'];
+
+------------------------------------------------------------------------------------------------------------------------
+15) reduce() - good to calculate a single value based on array
+------------------------------------------------------------------------------------------------------------------------
+let value = array.reduce(function(previousValue, item, index, array) {
+  // ...
+}, initial);
+
+
+
+
+
