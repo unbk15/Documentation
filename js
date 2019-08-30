@@ -168,6 +168,45 @@ let value = array.reduce(function(previousValue, item, index, array) {
   // ...
 }, initial);
 
+const numbers = [100, 300, 500, 70];
+const sum = numbers.reduce((accummulator, value) => accummulator + value);
+console.log(sum); // still returns 970
+
+------------------------------------------------------------------------------------------------------------------------
+16) forEach() - this method is good to iterate over the arrays
+------------------------------------------------------------------------------------------------------------------------
+
+const colors = ["green", "yellow", "blue"];
+const modifiedColors = [];
+colors.forEach(item => {
+  modifiedColors.push("$" + item);
+});
+---------------------------------------------------------------------------------------------------------------------------------
+17) every - this method checkes if the items from the array pass a certain condition if do it returns true, else it returns false
+----------------------------------------------------------------------------------------------------------------------------------
+
+const numbers = [1, -1, 2, 3];
+let allPositive = numbers.every((value) => {
+return value >= 0;
+})
+console.log(allPositive); // would return false
+-----------------------------------------------------------------------------------------------------------------------------------
+18) some() - this method checks if an item or two pass a certain condition if due, return true else return false
+------------------------------------------------------------------------------------------------------------------------------------
+
+const numbers = [1, -1, 2, 3];
+let atLeastOnePositive = numbers.some((value) => {
+return value >= 0;
+})
+console.log(atLeastOnePositive); // would return true
+
+------------------------------------------------------------------------------------------------------------------------------------
+19) includes() - check if an array contain a certain item, if das return true else return false
+------------------------------------------------------------------------------------------------------------------------------------
+
+let users = ['paddy', 'zaddy', 'faddy', 'baddy'];
+users.includes('baddy'); // returns true
+
 
 
 
