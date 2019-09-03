@@ -1,0 +1,23 @@
+=============================================
+WORKING WITH HEROKU STEPS
+=============================================
+
+1.Create account on Heroku site
+2.Download the appropriate heroku software for your computer
+3.Login in the heroku using the terminal and the credentials
+4.Go in the application folder which will be deployed and use command : git init 
+5.Check the status : git status 
+6.Add the file : git add .
+7.Commit the files : git commit -m "Adding the files"
+8.Heroku create app : heroku create
+9.Push to the heroku: git push heroku master
+
+=============================================
+OTHER COMMANDS IN HEROKU
+=============================================
+
+1.Loging the errors: heroku logs
+2.List the directores: heroku run ls
+3.See nodemodules installed: heroku run ls node_modules
+4.Install an forgeted package: heroku run npm install mongoose
+PS: Pay attention to the package.json,dependencies, start "start": "node app.js".
