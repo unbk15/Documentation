@@ -1,5 +1,7 @@
 
+====================================
 Steps to add a repo to the GitHub
+====================================
 
 -git init(in the folder where you want to init the project)
 -git add .
@@ -11,12 +13,20 @@ Steps to add a repo to the GitHub
 
 This should be it :)
 
-git commands 
+====================================
+MORE GIT
+====================================
 
--git checkout . -revert the changes that you made before comminting and pushing the code on a branch.
+1.git log  - show the history of the commits 
+2. ls -a   -list all 
+3.git add -A -add all files including hidden files
+4.git branch - list all the branches 
+5.git checkout -b nameofbranch - create a new branch and use it 
+6.git chekout namofbranch - switch to another branch
+7.git merge nameofbranch - merging branches
+8.git branch -d nameofbranch -remove branch
 
--CONSULTIX
- 1.pull from stefan branch
- 2.git checkout -b ilie-animation
+
+
 
 
