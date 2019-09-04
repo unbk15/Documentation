@@ -1,0 +1,345 @@
+/*======================================
+    1) SCOPE
+======================================*/
+
+"use strict";
+
+// 1)What is 'this' not inside of a declared object
+// R: Is the global window object
+//console.log(this);
+
+//  2) What is this inside a declared function
+//  R: Is the global object
+// function whatIsThis() {
+//   console.log(this);
+// }
+// whatIsThis();
+
+// 3)  Attaching Values to the global object from inside of a function is it possible ?
+// R: In the strict mode It is not it will give an error
+// function variablesInThis() {
+//   this.person = "Ellie";
+// }
+// console.log(person);
+
+// 4) Declaring word this inside of an object, what value will have ?
+// R: The closest parent object
+
+// var person = {
+//   firstName: "Ellie",
+//   sayHi: function() {
+//     return "Hi" + " " + this.firstName;
+//   },
+//   determinedContext: function() {
+//     return this === person;
+//   }
+// };
+
+// console.log(person.sayHi());
+// console.log(person.determinedContext());
+
+// var person = {
+//   firstName: "Colt",
+//   sayHi: function() {
+//     return "Hi" + " " + this.firstName();
+//   },
+//   determinContext: function() {
+//     return this === person;
+//   },
+//   dogs: {
+//     sayHello: function() {
+//       return "Hello" + " " + this.firstName;
+//     },
+//     determinContext: function() {
+//       return this === person;
+//     },
+//     determineThis: function() {
+//       return this;
+//     }
+//   }
+// };
+
+// console.log(person.dogs.sayHello());
+// console.log(person.dogs.determinContext());
+// console.log(person.dogs.determineThis());
+
+// 5) How to access properties of an object which is not our parent Object
+// R: Using Call, Apply, Bind
+
+// 6) About Call, Apply, Bind
+
+// I: Always The First Paramter of Call, Apply, Bind is the this keyword of the chosen object
+// I: Call, Apply, Bind only can be used on functions
+// I: call(this, a, b, c, d) - imediatelly invoke
+// I: apply(this, [a, b, c, d]); -imediatelly invoke
+// I: bind(this, a, b, c, d) - retun a function definition
+
+// var person = {
+//   firstName: "Colt",
+//   sayHi: function() {
+//     return "Hi" + " " + this.firstName();
+//   },
+//   determinContext: function() {
+//     return this === person;
+//   },
+//   dogs: {
+//     sayHello: function() {
+//       return "Hello" + " " + this.firstName;
+//     },
+//     determinContext: function() {
+//       return this === person;
+//     },
+//     determineThis: function() {
+//       return this;
+//     }
+//   }
+// };
+
+// console.log(person.dogs.sayHello.call(person));
+// console.log(person.dogs.determinContext.call(person));
+// console.log(person.dogs.determineThis.call(person));
+
+// 7) How to use call in the wind
+// R: Carefully how you see in the example bellow
+
+// var colt = {
+//   firstName: "Colt",
+//   sayHi: function() {
+//     return "Hi" + " " + this.firstName;
+//   }
+// };
+
+// var elie = {
+//   firstName: "Elie"
+// };
+
+// console.log(colt.sayHi());
+// console.log(colt.sayHi.call(elie));
+
+// 8) How to use apply
+// R: Using arrgumets as an array
+
+// var colt = {
+//   firstName: "Colt",
+//   sayHi: function() {
+//     return "Hi" + " " + this.firstName;
+//   },
+//   addNumbers: function(a, b, c, d) {
+//     return this.firstName + " just calculated " + (a + b + c + d);
+//   }
+// };
+
+// var elie = {
+//   firstName: "Elie"
+// };
+
+// console.log(colt.sayHi());
+// console.log(colt.addNumbers(1, 2, 3, 4));
+// console.log(colt.sayHi.apply(elie));
+// console.log(colt.addNumbers.call(elie, 5, 6, 8, 9));
+// console.log(colt.addNumbers.apply(elie, [4, 6, 7, 8]));
+
+// 9) How to use bind()
+// R: Using it as it is not immediately invoked
+
+// var colt = {
+//   firstName: "Colt",
+//   sayHi: function() {
+//     return "Hi" + " " + this.firstName;
+//   },
+//   addNumbers: function(a, b, c, d) {
+//     return this.firstName + " just calculated " + (a + b + c + d);
+//   }
+// };
+
+// var elie = {
+//   firstName: "Elie"
+// };
+
+// var elieCalc = colt.addNumbers.bind(elie, 1, 2, 3, 45);
+// console.log(elieCalc());
+// var elieCalc2 = colt.addNumbers.bind(elie, 1, 2);
+// console.log(elieCalc2());
+
+// 10) Bind in the Wind
+
+// var colt = {
+//   firstName: "Colt",
+//   sayHi: function() {
+//     setTimeout(
+//       function() {
+//         console.log("Hi " + this.firstName);
+//       }.bind(this),
+//       1000
+//     );
+//   }
+// };
+
+// colt.sayHi();
+
+// 11) The new keyword
+
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
+
+// var elie = new Person("Ellie", "Schoppik");
+// console.log(elie.firstName);
+// console.log(elie.lastName);
+
+//==========================================
+// 2) OOP
+//==========================================
+
+// 1) Creating Objects
+
+// function House(bedrooms, bathrooms, numSqft) {
+//   this.bedrooms = bedrooms;
+//   this.bathrooms = bathrooms;
+//   this.numSqft = numSqft;
+// }
+
+// var firstHouse = new House(2, 2, 1000);
+// console.log(firstHouse);
+
+// function Dog(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.bark = function() {
+//     console.log(this.name + " just Barked");
+//   };
+// }
+
+// var rusty = new Dog("Rusty", 3);
+// var fido = new Dog("Fido", 1);
+
+// rusty.bark();
+// fido.bark();
+
+// 2) Using multiple construction functions
+
+// function Car(maker, model, year) {
+//   this.make = maker;
+//   this.model = model;
+//   this.year = year;
+//   this.numWheels = 4;
+// }
+
+// function Motorcycle(make, model, year) {
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
+//   this.numWheels = 2;
+// }
+
+// 3) Using call To Reduce Duplicate Code
+
+// function Car(maker, model, year) {
+//   this.make = maker;
+//   this.model = model;
+//   this.year = year;
+//   this.numWheels = 4;
+// }
+
+// function Motorcycle(make, model, year) {
+//   // using call
+//   Car.call(this, make, model, year);
+//   this.numWheels = 2;
+// }
+
+// 4) Prototype Chain
+
+// function Person(name) {
+//   this.name = name;
+// }
+// Person.prototype.isPerson = true;
+// var elie = new Person("Elie");
+// var colt = new Person("Colt");
+// console.log(elie.__proto__);
+
+// Prototype Inheritance
+
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayHi = function() {
+//   return "Hi " + this.name;
+// };
+// var elie = new Person("Elie");
+// console.log(elie.sayHi());
+
+// 5) Closures
+
+// function outer() {
+//   var data = "closures are ";
+//   return function inner() {
+//     var innerData = "awesome";
+//     return data + innerData;
+//   };
+// }
+// console.log(outer()());
+
+// 6)Private Variables
+
+// function counter() {
+//   var count = 0;
+//   return function() {
+//     return ++count;
+//   };
+// }
+
+// var counter1 = counter();
+// console.log(counter1());
+// console.log(counter1());
+
+// 7) More Private Variables
+
+// function classRoom() {
+//   var instructors = ["Colt", "Ellie"];
+//   return {
+//     getInstructors: function() {
+//       return instructors;
+//     },
+//     addInstructor: function(instructor) {
+//       instructors.push(instructor);
+//       return instructors;
+//     }
+//   };
+// }
+
+// var course1 = classRoom();
+// console.log(course1.getInstructors());
+// console.log(course1.addInstructor("John"));
+// console.log(course1.getInstructors());
+
+// var course2 = classRoom();
+// console.log(course2.getInstructors());
+
+//
+// Exercise
+
+// function Vehicle(make, model, year) {
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
+//   this.isRunning = false;
+// }
+
+// Vehicle.prototype.turnOn = function() {
+//   this.isRunning = true;
+// };
+
+// Vehicle.prototype.turnOff = function() {
+//   this.isRunning = false;
+// };
+
+// Vehicle.prototype.honk = function() {
+//   if (this.isRunning === true) {
+//     return "beep";
+//   }
+// };
+
+// var car1 = new Vehicle("VW", "Bora", 2005);
+// console.log(car1.__proto__);
