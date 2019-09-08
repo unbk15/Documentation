@@ -1,0 +1,4 @@
+1.Create Svelte App: npx degit sveltejs/template my-svelte-project
+2: npm i 
+3: npm run dev
+4: npm i firebase rxfire rxjs
