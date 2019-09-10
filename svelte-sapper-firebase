@@ -1,0 +1,15 @@
+==================================================================
+CREATE SVELTE PROJECT
+==================================================================
+1.Create Svelte App: npx degit sveltejs/template my-svelte-project
+2: npm i 
+3: npm run dev
+4: npm i firebase rxfire rxjs
+
+===================================================================
+CREATE SVELTE-SAPPER-PROJECT
+===================================================================
+1.npx degit "sveltejs/sapper-template#rollup" my-app
+2.cd my-app
+3.npm install
+4.npm run dev
