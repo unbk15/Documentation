@@ -1,2 +1,8 @@
 1.Create React App: create-react-app assignement2
 2.npm i radium
+3.Enable the css scoped to every component
+a) npm run eject
+b) In config->webpack.config.dev.js(in the file look after module->test: /\.css$/) at options section add: 
+modules: true,
+localIdentName: '[name]__[local]__[hash:base64:5]]'
+c) In config->webpack.config.prod.js(in the file look after module->test: /\.css$/, at options  )
