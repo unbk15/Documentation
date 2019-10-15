@@ -6,3 +6,11 @@ b) In config->webpack.config.dev.js(in the file look after module->test: /\.css$
 modules: true,
 localIdentName: '[name]__[local]__[hash:base64:5]]'
 c) In config->webpack.config.prod.js(in the file look after module->test: /\.css$/, at options  )
+4.use bulmaCss: npm install react-bulma-components
+
+====================================================================
+REDUX
+====================================================================
+
+1.npm install redux
+2.npm i react-redux
