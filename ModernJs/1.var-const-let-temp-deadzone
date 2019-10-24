@@ -37,7 +37,7 @@
 // console.log(x);
 // expected output global
 
-// using var
+// a) using var
 
 // var y = "global";
 // if (y === "global") {
@@ -48,7 +48,7 @@
 // console.log(y);
 // expected output block-scoped
 
-// Const
+// b) Const
 // Similarly to let, const are block-scoped, but they are differ in the fact that their value can;t change through re-assignment
 // or can't be re-declared.
 
