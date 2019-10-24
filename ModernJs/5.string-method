@@ -1,0 +1,76 @@
+//=============================================
+// 1.indexOf()
+//=============================================
+// gets the position of the first occurrence of the specified value in a astring
+
+// const str = "this is a short sentence";
+// console.log(str.indexOf("short"));
+
+//=============================================
+// 2.slice()
+//=============================================
+// pulls a specified part of a string as a new string.
+
+// const str = "pizza, orange, cereals";
+// const subString = str.slice(0, 5);
+// console.log(str);
+// console.log(subString);
+
+//===============================================
+// 3.toUpperCase()
+//===============================================
+// turns all characters of a string to uppercase
+
+// const str = "i ate an apple";
+// console.log(str.toUpperCase());
+
+//================================================
+// 4.toLowerCase()
+//================================================
+// turn all characters of a string to lowecase
+
+// const str = "I ate an apple";
+// console.log(str.toLocaleLowerCase());
+
+//================================================
+// 5.startsWith()
+//================================================
+// check if a string starts with the values we pass in and return true or false
+// we can pass a second parameters to specify where the metod to start looking
+
+// const code = "ABCDEFG";
+// console.log(code.startsWith("ABB"));
+// console.log(code.startsWith("abc"));
+// console.log(code.startsWith("ABC"));
+// console.log(code.startsWith("CDE", 2));
+
+//==================================================
+// 6.endsWith()
+//==================================================
+// method checked if string ends in the passed values
+// we can pass a second argument as parameter as a number
+// the number represent the number of leters took into consideration
+
+// const code = "ABCDEF";
+// console.log(code.endsWith("DDD"));
+// console.log(code.endsWith("edf"));
+// console.log(code.endsWith("DEF"));
+// console.log(code.endsWith("DE", 5));
+
+//=====================================================
+// 7.includes()
+//=====================================================
+// this method checks if our string includes the values we passed in
+
+// const code = "ABCDEF";
+// console.log(code.includes("ABB"));
+// console.log(code.includes("abc"));
+// console.log(code.includes("CDE"));
+
+//=================================================
+// 8.repeat()
+//=============================================
+// this method will repeat what we passed in
+
+// let hello = "Hi";
+// console.log(`${hello.repeat(10)} not bad at all`);
