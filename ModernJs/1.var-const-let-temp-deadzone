@@ -1,0 +1,92 @@
+
+// =============================================================================================================================
+// 1.var declared with var keyword are function scoped, which means that if we
+// declare them inside a for loop (which is a block scope) they will be available outside of it
+// =============================================================================================================================
+
+
+// for (var i = 0; i < 10; i++) {
+//   var leak = "I'm available outside of the loop";
+// }
+// console.log(leak);
+// // I'm available outside of the loop
+
+// function myFunc() {
+//   var funcionScoped = "I'm available inside this function";
+//   console.log(funcionScoped);
+// }
+
+// myFunc();
+// I'm available in this function
+// console.log(funcionScoped);
+// ReferanceError functionScoped is not defined;
+
+// =============================================================================================================================
+// 2.let - varibles declared with the let (and const) keyword are block scoped, meaning that
+// they will be available only inside of the block where they are declared and its sub-blocks.
+// =============================================================================================================================
+
+// let x = "global";
+
+// if (x === "global") {
+//   let x = "block-scoped";
+//   console.log(x);
+// expected output: block-scoped
+// }
+
+// console.log(x);
+// expected output global
+
+// using var
+
+// var y = "global";
+// if (y === "global") {
+//   var y = "block-scoped";
+//   console.log(y);
+//   // expected output block-scoped
+// }
+// console.log(y);
+// expected output block-scoped
+
+// Const
+// Similarly to let, const are block-scoped, but they are differ in the fact that their value can;t change through re-assignment
+// or can't be re-declared.
+
+// const constant = "I am a constant";
+// constant = " I can't be reassigned";
+// Uncaught TypeError: Assignment to constant variable
+
+// const person = {
+//   name: "Alberto",
+//   age: 25
+// };
+
+// person.age = 26;
+// console.log(person.age);
+// 26
+// we can rewrite a value in an object if the object is declared as const
+
+// const person = {
+//   name: "Alberto",
+//   age: 25
+// };
+
+// person.age = 26;
+// console.log(person.age);
+// Object.freeze(person);
+// person.age = 30;
+// console.log(person.age);
+// 26
+
+// =============================================================================================================================
+// 3.The temporal dead zone
+// =============================================================================================================================
+
+// console.log(i);
+// var i = "I am a varibale";
+// expected output undefined
+
+// console.log(j);
+// let j = "I'm a let";
+// expected output: RefferenceError: can't access lexical declaration j before initialization
+// we can't access the let and const value before the initialization.
