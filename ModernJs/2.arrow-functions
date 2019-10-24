@@ -1,0 +1,131 @@
+// ======================
+// 1.Declaring Arrows
+// ======================
+
+// a) Old Syntax
+
+// var greeting = function(name) {
+//   return "hello " + name;
+// };
+
+// b) New Syntax
+
+// const greeting = name => {
+//   return `hello ${name}`;
+// };
+
+// const greeting = () => {
+//   return "hello";
+// };
+
+// ============================
+// 2.Implicitly return
+// ============================
+
+// a) skip return
+
+// const greeting = name => `hello ${name}`;
+
+// b) return an object literal
+
+// const race = "100m dash";
+// const runners = ["Usain Bolt", "Justin Gatlin", "Asafa Powell"];
+// const results = runners.map((runner, i) => ({
+//   name: runner,
+//   race,
+//   place: i + 1
+// }));
+
+// console.log(results);
+// [{name: "Usain Bolt", race: "100m dash", place: 1}
+// {name: "Justin Gatlin", race: "100m dash", place: 2}
+// {name: "Asafa Powell", race: "100m dash", place: 3}]
+
+// c) Arrow functions are anonymous
+
+// const greeting = name => `hello ${name}`;
+// greeting("Tom");
+
+// d) Arrow functions and this keyword
+
+// - WHEN YOU USE AN ARROW FUNCTION THE THIS KEYWORD IS INHERIT FROM THE PARENT SCOPE
+
+// d1) Using normal function
+
+// const box = document.querySelector(".box");
+// //listen for a click event
+// box.addEventListener("click", function() {
+//   // toggle the class opening on the div
+//   console.log(this);
+//   this.classList.toggle("opening");
+//   setTimeout(function() {
+//     // try to toggle again the class
+//     console.log(this);
+//     this.classList.toggle("open");
+//   });
+// });
+
+// d2) Using Arrow function
+
+// const box = document.querySelector(".box");
+// //listen for a click event
+// box.addEventListener("click", function() {
+//   // toggle the class opening on the div
+//   console.log(this);
+//   this.classList.toggle("opening");
+//   setTimeout(() => {
+//     // try to toggle again the class
+//     console.log(this);
+//     this.classList.toggle("open");
+//   }, 2000);
+// });
+
+// e) When You Should Avoid Arrow Functions
+
+// const button = document.querySelector("btn");
+// button.addEventListener("click", () => {
+//   // error *this* refers to the window Object
+//   this.classList.toggle("on");
+// });
+
+// const person = {
+//   age: 10,
+//   grow: () => {
+//     // error *this* refers to the `Window` Object
+//     this.age++;
+//   }
+// };
+
+// f) Access to the arguments object
+//    Arrow functions inherit the value of the arguments object from their parent scope
+// function exemple() {
+//   console.log(arguments);
+//   console.log(arguments[0]);
+// }
+
+// exemple(1, 2, 3, 5);
+
+// const showWinner = () => {
+//   const winner = arguments[0];
+//   return `${winner} was the winner`;
+// };
+// showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell");
+// ReferenceError: arguments is not defined
+
+// h) Spread Operator in arrow function
+
+// const showWinner = (...args) => {
+//   const winner = args[0];
+//   return `${winner} was the winner`;
+// };
+// console.log(showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell"));
+// "Usain Bolt was the winner"
+
+// i) using normal function
+
+// const showWinner = function() {
+//     const winner = arguments[0];
+//     return `${winner} was the winner`
+//   }
+//   showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell")
+//   // "Usain Bolt was the winner"
