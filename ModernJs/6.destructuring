@@ -1,0 +1,85 @@
+//=========================================
+// 1.Destructuring Objects
+//=========================================
+
+// var person = {
+//   first: "Alberto",
+//   last: "Montalesi"
+// };
+
+// ES5
+
+// var first = person.first;
+// var last = person.last;
+
+// ES6
+
+// var person = {
+//   first: "Alberto",
+//   last: "Montalesi"
+// };
+
+// const { first, last } = person;
+
+// a) If the data is nested
+
+// const person = {
+//   name: "Alberto",
+//   last: "Montalesi",
+//   links: {
+//     social: {
+//       facebook: "https://www.facebook.com/alberto.montalesi"
+//     },
+//     website: "http://albertomontalesi.github.io/"
+//   }
+// };
+
+// const { facebook } = person.links.social;
+
+// b) We can rename our variable
+
+// const { facebook: fb } = person.links.social;
+// it will look for the property person.links.social.facebook and name the variable fb
+
+// c) We can assign default value
+
+// const { facebook: fb = "https://www.facebook.com" } = person.links.social;
+// we renamed the variable to *fb* and we also set a default value to it
+
+//=======================================================
+// 2.Destructuring Arrays
+//=======================================================
+
+// const person = ["Alberto", "Montalesi", 25, "pizza", "ice crem", "cheese cake"];
+// const [name, surname, age] = person;
+// a) We leave out age, we don't want it
+
+// const [name, surname] = person;
+// console.log(name, surname);
+
+// b) using rest operator
+// const [name, surname, ...food] = person;
+// console.log(food);
+
+//=======================================================
+// 3.Swapping variables with destructuring
+//=======================================================
+//easy to swap variables
+
+// let hungry = "yes";
+// let full = "no";
+
+// [hungry, full] = [full, hungry];
+// console.log(hungry, full);
+
+//===================================================
+// 4.Destructuring functions
+//================================================
+
+// function totalBill({ total, tax = 0.1 }) {
+//   return total + total * tax;
+// }
+
+// // as you see since we are using the same names, we don't have to pass the arguments in the same order as when we declared the function
+// // we are also overriding the default value we set for the tax
+// const bill = totalBill({ tax: 0.15, total: 150 });
