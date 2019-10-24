@@ -1,0 +1,109 @@
+//===============================================
+//1.Template literals
+//===============================================
+
+// 1) Interpolating Strings
+
+// var name = "Alberto";
+// var greeting = "Hello my name is" + name;
+// console.log(greeting);
+// Hello my name is Alberto
+
+// let name = "Alberto";
+// const greeting = `Hello my name is ${name}`;
+// console.log(greeting);
+
+// Hello my name is Alberto
+
+// 2)Expression interpolations
+
+// ES5
+
+// var a = 1;
+// var b = 10;
+// console.log("1 * 10 is " + a * b);
+
+// ES6
+
+// var a = 1;
+// var b = 10;
+// console.log(`1*10 is ${a * b}`);
+
+// 3)Create HTML fragments
+
+// We have to include a backslash on each line
+
+// ES5
+
+// var text = "hello,\
+//             my name is Alberto\
+//             how are you ?";
+// console.log(text);
+
+// ES6
+
+// const content = `hello,
+// my name is Alberto
+// How are you ?`;
+// console.log(content);
+
+// 4) Nesting templates
+
+// let people = [{ name: "John" }, { name: "Vasile" }];
+// const markup = `<ul>${people.map(person => `<li>${person.name}</li>`)}</ul>`;
+// console.log(markup);
+
+// 5) Ternary Operator
+
+// const isDiscounted = false;
+// return isDiscounted ? "$10" : "$20";
+
+// const artist = {
+//   name: "Bon Jovi",
+//   age: 56
+// };
+
+// const artist = {
+//   name: "Trent Reznor",
+//   age: 53,
+//   song: "Hurt"
+// };
+
+// const text = `<div><p>${artist.name} is ${artist.age} years old ${
+//   artist.song ? `and wrote the song ${artist.song}` : ""
+// } </p></div>`;
+
+// console.log(text);
+
+// 6)Pass a function to a template literals
+
+// const groceries = {
+//   meat: "pork chop",
+//   veggie: "salad",
+//   fruit: "apple",
+//   others: ["mushrooms", "instant noodles", "instant soup"]
+// };
+
+// function groceryList(others) {
+//   return `<p>${others.map(other => `<span>${other}</span>`).join("")}</p>`;
+// }
+
+// const markup = `<div>
+//                     <p>${groceries.meat}</p>
+//                     <p>${groceries.veggie}</p>
+//                     <p>${groceries.fruit}</p>
+//                     <p>${groceryList(groceries.others)}</p>
+//                 </div>`;
+// console.log(markup);
+// 7) Tagged template literals
+
+// let person = "Alberto";
+// let age = 25;
+// function myTag(strings, personName, personAge) {
+//   let str = strings[1];
+//   let ageStr;
+//   personAge > 50 ? (ageStr = "grandpa") : (ageStr = "youngster");
+//   return personName + str + ageStr;
+// }
+// let sentence = myTag`${person} is a ${age}`;
+// console.log(sentence);
