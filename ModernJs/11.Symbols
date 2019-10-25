@@ -1,0 +1,50 @@
+//=================================
+// 1) Symbols
+//=================================
+// Symbols are always unique
+// Symbols are not enumerable
+
+// const me = Symbol("Alberto");
+// console.log(me);
+// const clone = Symbol("Alberto");
+// console.log(clone);
+
+// console.log(me === clone);
+// false
+
+// 1)using to create identifiers
+
+// const office = {
+//   Tom: "CEO",
+//   Mark: "CTO",
+//   Mark: "CTO"
+// };
+
+// for (person in office) {
+//   console.log(person);
+// }
+
+// 2) Are not enumerable
+
+// const office = {
+//   [Symbol("Tom")]: "CEO",
+//   [Symbol("Mark")]: "CTO",
+//   [Symbol("Mark")]: "CTO"
+// };
+
+// for (person in office) {
+//   console.log(person);
+// }
+
+// 3)To Loop Over Them use Object.getOwnPropertySymbols().
+
+// const office = {
+//   [Symbol("Tom")]: "CEO",
+//   [Symbol("Mark")]: "CTO",
+//   [Symbol("Mark")]: "CTO"
+// };
+
+// const symbols = Object.getOwnPropertySymbols(office);
+// console.log(symbols);
+// const value = symbols.map(symbol => office[symbol]);
+// console.log(value);
