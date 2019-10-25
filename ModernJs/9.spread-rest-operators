@@ -1,0 +1,92 @@
+//============================
+//1) Combine Arrays
+//============================
+
+// const veggie = ["tomato", "cucumber", "beans"];
+// const meat = ["pork", "beef", "chicken"];
+// const menu = [...veggie, "pasta", ...meat];
+// console.log(menu);
+
+//==================================
+// 2)Copy arrays
+//==================================
+// very helpfull when we want to copy an array
+
+// const veggie = ["tomato", "cucumber", "beans"];
+// const newVeggie = veggie;
+
+// veggie.push("peas");
+// console.log(veggie);
+// Array [ "tomato", "cucumber", "beans", "peas" ]
+// console.log(newVeggie);
+// Array [ "tomato", "cucumber", "beans", "peas" ]
+
+// a) ES5
+
+// const veggie = ["tomato", "cucumber", "beans"];
+// const newVeggie = [].concat(veggie);
+
+// b) ES6
+
+// const veggie = ["tomato", "cucumber", "beans"];
+// const newVeggie = [...veggie];
+
+//======================================================
+//3) Spread into a function
+//===================================================
+
+// OLD WAY
+
+// 1)
+
+// function doStuff(x, y, z) {
+//   console.log(args);
+//   console.log(x + y + z);
+// }
+
+// var args = [0, 1, 2];
+
+// Call the function, passing args
+// doStuff.apply(null, args);
+
+// USE THE SPREAD SYNTAX
+// doStuff(...args);
+
+// 2)
+
+// const name = ["Alberto", "Montalesi"];
+// function greet(first, last) {
+//   console.log(`Hello ${first} ${last}`);
+// }
+// greet(...name);
+
+// 3) We provide more values as arguments
+
+// const name = ["John", "Paul", "Jones"];
+// function greet(first, last) {
+//   console.log(`Hello ${first} ${last}`);
+// }
+// greet(...name);
+
+//===============================
+// 4) Spread in Object Literals
+//===============================
+
+// let person = {
+//   name: "Alberto",
+//   surname: "Montalesi",
+//   age: 25
+// };
+
+// let clone = { ...person };
+// clone.gender = "F";
+// console.log(clone);
+
+//==================================
+// 5) REST PARAMETER
+//==================================
+
+// const runners = ["Tom", "Paul", "Mark", "Luke"];
+// const [first, second, ...losers] = runners;
+// console.log(first, second, losers);
+// Tom Paul Array [ "Mark", "Luke" ]
