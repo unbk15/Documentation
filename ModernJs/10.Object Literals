@@ -1,0 +1,87 @@
+//=====================================\
+// 1) Deconstructing variables into keys and values
+//================================================
+
+// const name = "Alberto";
+// const surname = "Montalesi";
+// const age = 25;
+// const nationality = "Italian";
+
+// OLD WAY
+
+// const person = {
+//   name: name,
+//   surname: surname,
+//   age: age,
+//   nationality: nationality
+// };
+
+// ES6
+
+// const person = {
+//   name,
+//   surname,
+//   age,
+//   nationality
+// };
+
+// console.log(person);
+
+//=====================================
+// 2) ADD FUNCTIONS TO OUR OBJECTS
+//=====================================
+
+// OLD WAY
+
+// const person = {
+//   name: "Alberto",
+//   greet: function() {
+//     console.log("Hello");
+//   }
+// };
+
+// ES6
+
+// const person = {
+//   name: "Alberto",
+//   greet() {
+//     console.log("Abra Cadabra");
+//   },
+//   surname: "Johny"
+// };
+
+// person.greet();
+
+//===================================
+// 3)Arrow functions are anonymous
+//===================================
+
+// const person1 = {
+//   greet: () => {
+//     console.log("Hello to this" + this);
+//   }
+// };
+
+// person1.greet();
+
+//===============================================
+// 4) Dynamically define properties of an Object
+//===============================================
+
+// OLD WAY
+
+// var name = "myname";
+// var person = {};
+// update the object
+
+// person[name] = "Alberto";
+// console.log(person.myname);
+
+// ES6
+
+// const name = "myname";
+// const person = {
+//   [name]: "Alberto"
+// };
+
+// console.log(person.myname);
