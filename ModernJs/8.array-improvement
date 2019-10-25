@@ -1,0 +1,66 @@
+//=====================================
+// 1) Array from
+//=====================================
+// it takes something that looks like an array and trandform it in a real array
+// especially for converting nodeLists;
+
+// 1) It is a nodeList
+// const fruits = document.querySelectorAll(".fruits p");
+
+// 2) It is an Array
+// const fruitArray = Array.from(fruits);
+
+// const fruitNames = fruitArray.map(fruit => fruit.textContent);
+// console.log(fruitNames);
+// ["Apple", "Banana", "Orange"]
+
+// 3) Array from takes a second Argument as a map function;
+
+// const fruits = document.querySelectorAll(".fruits p");
+// const fruitArray = Array.from(fruits, fruit => {
+//   console.log(fruit);
+//   return fruit.textContent;
+// });
+// console.log(fruitArray);
+// ["Apple", "Banana", "Orange"]
+
+//==========================================
+// 2) Array.of()
+//==========================================
+// will create an array with all the arguments we pass to it
+
+// const digits = Array.of(1, 2, "m", "t", 3, 5, 9);
+// console.log(digits);
+
+//=============================================
+// 3) Array find()
+//=============================================
+// return the value of first element which satisfies the provided testing function
+// otherwise it return undefined
+
+// const array = [1, 2, 4, 5];
+// let found = array.find(e => e > 3);
+// console.log(found);
+// 4
+
+//========================================
+// 4) Array.findIndex()
+//========================================
+// will return the index of the first element which match our condition
+
+// const greetings = ["hello", "hi", "byebye", "goodbye", "hi"];
+// let foundIndex = greetings.findIndex(e => e === "hi");
+// console.log(foundIndex);
+//1
+
+//=====================================================================
+// 5) Array.some() && Array.every()
+//====================================================================
+// some will search if there are some items matching the condition and will return true once find the first one
+// every will check against all the items, if every items matching the given condition
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let arraySome = array.some(e => e > 2);
+// console.log(arraySome);
+// let arrayEvery = array.every(e => e > 10);
+// console.log(arrayEvery);
