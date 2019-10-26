@@ -1,0 +1,136 @@
+//================================
+// 1) Promises
+//================================
+
+// 1) Creata a promise
+// const myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     // resolve("The Value we get from the promise");
+//     reject(Error("This is our error"));
+//   }, 2000);
+// });
+
+// 2) Consume a promise
+// myPromise.then(data => { console.log(data);}).catch(err => console.log(err));
+
+// 3) Chaining Promises when we succeded
+
+// const myPromise = new Promise((resolve, reject) => {
+//   const data1 = `Data returned from the first promise`;
+//   resolve(data1);
+// });
+
+// myPromise
+//   .then(data => {
+//     const data2 = `${data} and data returned from the second promise`;
+//     const dataReturn1 = new Promise((resolve, reject) => {
+//       resolve(data2);
+//     }).then(data2 => {
+//       console.log(data2);
+//     });
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
+
+// 4) Chain rejected promises
+
+// const myPromise = new Promise((resolve, reject) => {
+//   resolve("Programming is great");
+// });
+
+// myPromise
+//   .then(data => {
+//     throw new Error("oops");
+//     console.log("first value");
+//   })
+//   .catch(() => {
+//     console.log("Catch an Error");
+//   })
+//   .then(data => {
+//     console.log("Second Value");
+//   });
+
+// 5) Promise.resolve() && Promise.reject();
+
+// Promise resolve()
+// Promise.resolve("Success").then(
+//   value => {
+//     console.log(value);
+//   },
+//   function(value) {
+//     // not called
+//   }
+// );
+
+// 6) Promise.reject();
+
+// Promise.reject(new Error("fail")).then(
+//   data => {
+//     console.log(data);
+//   },
+//   function(error) {
+//     console.log(error);
+//   }
+// );
+
+// 7) Promise.all() & Promise.race()
+// Promise all  - return a single promise when all promises were resolved
+
+// const promise1 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 500, "first value");
+// });
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 1000, "second value");
+// });
+
+// promise1.then(data => {
+//   console.log(data);
+//   // after 500 ms
+//   // first value
+// });
+// promise2.then(data => {
+//   console.log(data);
+//   // after 1000 ms
+//   // second value
+// });
+
+// Promise.all([promise1, promise2]).then(data => {
+//   const [promise1data, promise2data] = data;
+// after 1000 ms
+// first value second value
+//   console.log(promise1data, promise2data);
+// });
+
+// 8) If one of the promises was rejected all of the promises will return rejected even
+// if they particularly succedded
+
+// const promise1 = new Promise((resolve, reject) => {
+//   resolve("my first value");
+// });
+// const promise2 = new Promise((resolve, reject) => {
+//   reject(Error("oooops error"));
+// });
+
+// one of the two promises will fail, but `.all` will return only a rejection.
+// Promise.all([promise1, promise2]).then(data => {
+//   const [promise1data, promise2data] = data;
+//   console.log(promise1data, promise2data);
+// Error: oooops error
+// });
+
+// 9)Promise.race() on the other hand returns a promise that resolves or rejects as soon as one of the promises
+// in the iterable resolves or rejects, with the value from that promise.
+
+// const promise1 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 500, "first value");
+// });
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, "second value");
+// });
+
+// Promise.race([promise1, promise2]).then(value => {
+//   console.log(value);
+  // Both resolve, but promise2 is faster
+  // expected output "second value"
+// });
