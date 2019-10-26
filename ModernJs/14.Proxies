@@ -1,0 +1,42 @@
+//====================================
+// 1) Proxies
+//===================================
+// our target can be anything, from an object, to a function, to another Proxy
+// a handler is an object which will define the behavior of our Proxy when an operation is performed on it
+
+// const dog = { breed: "German Shepard", age: 5 };
+// const dogProxy = new Proxy(dog, {
+//   get(target, breed) {
+//     return target[breed].toUpperCase();
+//   },
+//   set(target, breed, value) {
+//     console.log("changing breed to ...");
+//     target[breed] = value;
+//   }
+// });
+
+// console.log(dogProxy.breed);
+// console.log((dogProxy.breed = "Labrador"));
+// console.log(dogProxy.breed);
+
+//=========================================
+// 2) Using Proxi to validate data
+//========================================
+
+// const validateAge = {
+//   set: function(object, property, value) {
+//     if (property === "age") {
+//       if (value < 18) {
+//         throw new Error("You are too yound! ");
+//       }
+//     } else {
+//       // default behaviour
+//       object.property = value;
+//       return true;
+//     }
+//   }
+// };
+
+// const user = new Proxy({}, validateAge);
+// console.log((user.age = 17));
+// console.log((user.age = 21));
