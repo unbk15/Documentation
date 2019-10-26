@@ -1,0 +1,102 @@
+//============================================
+// 1) Generators
+//============================================
+// A generator function is a function that we can start and stop
+// for an indefinte amount of time and restart with the possibility
+// of passing additional dta at a later point in time
+
+// function* fruitList() {
+//   yield "Banana";
+//   yield "Apple";
+//   yield "Orange";
+// }
+
+// const fruits = fruitList();
+// fruits;
+// Generator
+// fruits.next();
+// Object { value: "Banana", done: false }
+// fruits.next();
+// Object { value: "Apple", done: false }
+// fruits.next();
+// Object { value: "Orange", done: false }
+// fruits.next();
+// Object { value: undefined, done: true }
+
+//=================================================
+// 2) Looping Over an Array with Generators
+//=================================================
+// We can use the for of loop to iterate over our generator and yield the content at each loop.
+
+// const fruitList = ["Banana", "Apple", "Orange", "Melon", "Cherry", "Mango"];
+
+// create our looping generator
+
+// function* loop(arr) {
+//   for (const item of arr) {
+//     yield `I like to eat ${item}s`;
+//   }
+// }
+
+// const fruitGenerator = loop(fruitList);
+// console.log(fruitGenerator.next());
+// console.log(fruitGenerator.next());
+// console.log(fruitGenerator.next().value);
+
+//=============================================
+// 3) Finish the generator with .return();
+//=============================================
+// Using .return() we can return a given value and finish the generator.
+
+// function* fruitList() {
+//   yield "Banana", yield "Apple";
+//   yield "Orange";
+// }
+
+// const fruits = fruitList();
+// console.log(fruits.return("Banana"));
+
+//==============================================
+// 4) Caching errors with .throw();
+//==============================================
+
+// function* gen() {
+//   try {
+//     yield "Trying ... ";
+//     yield "Trying harder ...";
+//     yield "Trying even harder ..";
+//   } catch (err) {
+//     console.log("Error: " + err);
+//   }
+// }
+
+// console.log(gen().next());
+// console.log(gen().next());
+// console.log(gen().throw("oops"));
+
+//==========================================
+// Combine Generators with Promises
+//==========================================
+
+// const myPromise = new Promise(resolve => {
+//   resolve("Our value is ... ");
+// });
+
+// function* gen() {
+//   let result = "";
+// return promise
+//   yield myPromise.then(data => {
+//     result = data;
+//     console.log(data);
+//   });
+// wait for the promise and then use his value;
+//   yield result + " 2";
+// }
+
+// Call the async function and pass params
+
+// const asyncFunc = gen();
+// console.log(asyncFunc.next());
+// call the function and wait for it to resolve
+// console.log(asyncFunc.next());
+// Object {value : "our value is ... 2", done: false}
