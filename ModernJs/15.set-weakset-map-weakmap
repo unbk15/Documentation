@@ -1,0 +1,122 @@
+//===================================
+// 1) What is a set
+//===================================
+// A Set is an Object where we can store unique values of any type.
+
+// const family = new Set();
+
+// add values to it
+// family.add("Dad");
+// family.add("Mom");
+// family.add("Son");
+// family.add("Dad");
+// console.log(family);
+// console.log(family.size);
+// console.log(family.entries());
+// console.log(family.keys());
+// console.log(family.values());
+// family.delete("Dad");
+// console.log(family);
+// family.clear();
+// console.log(family);
+
+//===============================
+// 2) Loop over a set
+//===============================
+// We have two ways of iterating over a Set: using .next() or using a for of loop.
+
+// 1) Using next()
+
+// const iterator = family.values();
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+// 2) Using a for of loop
+
+// for (const person of family) {
+//   console.log(person);
+// }
+
+//===================================
+// 3)Remove duplicate from an array
+//===================================
+
+// 1) Remove duplicates from an array
+
+// const myArray = ["dad", "mom", "son", "dad", "mom", "daughter"];
+// const set = new Set(myArray);
+// console.log(set);
+
+// 2) Transform a set into an array
+
+// const uniqueArray = Array.from(set);
+// console.log(uniqueArray);
+
+// 3) Write the same but into a single line
+
+//const uniqueArray = Array.from(new Set(myArray));
+// Array [ "dad", "mom", "son", "daughter" ]
+
+//================================================
+// 4) What is a weakset
+//================================================
+// A WeakSet is similar to a Set but it can only contain Objects.
+// A WeakSet cleans itself up after we delete an element from it.
+
+// let dad = { name: "Daddy", age: 50 };
+// let mom = { name: "Mummy", age: 45 };
+
+// const family = new WeakSet([dad, mom]);
+
+// for (const person of family) {
+//   console.log(person);
+// }
+
+// 1) Cleaning the WeakSet
+
+// dad = null;
+// console.log(family);
+
+// wait a few seconds
+
+// setTimeout(() => {
+//   console.log(`This weakset should be gone forever ${family}`);
+// }, 10000);
+
+//===================================
+// 5) What is map
+//===================================
+// A Map is similar to a Set, but they have key/value pairs.////
+// If you remember, we could iterate over a Set only with a for of loop, while we can iterate over a Map with both a for of and a forEach loop.
+// const family = new Map();
+
+// family.set("Dad", 40);
+// family.set("Mom", 50);
+// family.set("Son", 20);
+// console.log(family);
+// console.log(family.size);
+// family.forEach((val, key) => console.log(key, val));
+// for (const [key, val] of family) {
+//   console.log(key, val);
+// }
+
+//===============================
+// 6) What is a WeakMap
+//===============================
+// A WeakMap is a collection of key/value pairs and similarly to a WeakSet, even in a WeakMap the keys are weakly referenced, which means that when the reference is lost, the value will
+// be removed from the WeakMap and garbage collected.
+
+// let dad = { name: "Daddy" };
+// let mom = { name: "Mommy" };
+
+// const myMap = new Map();
+// const myWeakMap = new WeakMap();
+
+// myMap.set(dad);
+// myWeakMap.set(mom);
+
+// dad = null;
+// mom = null;
+
+// console.log(myMap);
+// console.log(myWeakMap);
