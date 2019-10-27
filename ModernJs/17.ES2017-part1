@@ -62,4 +62,14 @@
 // 6) Trailing commas in function parameter lists and calls
 //==========================================================
 
-
+// from this
+// const object = {
+//     prop1: "prop",
+//     prop2: "propop"
+//   }
+  
+  // to this
+//   const object = {
+//     prop1: "prop",
+//     prop2: "propop",
+//   }
