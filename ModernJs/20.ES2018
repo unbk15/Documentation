@@ -1,0 +1,93 @@
+//=======================================================================
+// 1) Array.prototype.flat() / Array.prototype.flatMap()
+//=======================================================================
+// will flatten the array recursively up to the depth that we specify
+
+// const letters = ["a", "b", ["c", "d", ["e", "f", ["34", ["45"]]]]];
+// console.log(letters.flat());
+// console.log(letters.flat(2));
+// console.log(letters.flat(Infinity));
+
+//=======================================================================
+// 2) Array.prototype.flatMap()
+//=======================================================================
+// Array.prototype.flatMap() is identical to the previous one with regards to the way it handles the 'depth' argument but instead of simply flattening an array, with flatMap()
+// We can also map over it and return the result in the new array.
+
+// let greeting = ["Greetings from", " ", "Vietnam"];
+
+// greeting.map(x => console.log(x.split(" ")));
+// greeting.flatMap(x => console.log(x.split(" ")));
+
+//=========================================================================
+// 3) Object.fromEntries()
+//=========================================================================
+// Object.fromEntries() transforms a list of key-value pairs into an object.
+
+// const keyValueArray = [["key1", "value1"], ["key2", "value2"]];
+// const obj = Object.fromEntries(keyValueArray);
+// console.log(obj);
+
+//=============================================================================
+// 4) String.prototype.trimStart() / .trimEnd()
+//=============================================================================
+// String.prototype.trimStart() removes white space from the beginning of a string
+// String.prototype.trimEnd() removes them from the end.
+// We can also use .trimLeft() as an alias of .trimStart()
+// .trimRight() as an alias of .trimEnd().
+
+// let str = "    this string has a lot of whitespace   ";
+// str.length;
+// 42
+
+// str = str.trimStart();
+// "this string has a lot of whitespace   "
+// str.length;
+// 38
+
+// str = str.trimEnd();
+// "this string has a lot of whitespace"
+// str.length;
+// 35
+
+//===========================================
+// 5) Optional Catch Binding
+//===========================================
+
+// Before
+// try {
+//     ...
+//  } catch(error) {
+//     ...
+//  }
+
+//  // ES2019
+//  try {
+//     ...
+//  } catch {
+//     ...
+//  }
+
+//===========================================
+// 6)Function​.prototype​.toString()
+//===========================================
+// The .toString() method returns a string representing the source code of the function.
+
+// function sum(a, b) {
+// perform a sum
+//   return a + b;
+// }
+// console.log(sum.toString());
+// function sum(a, b) {
+// perform a sum
+//    return a + b;
+//  }
+
+//========================================
+// 7) Symbol.prototype.description
+//========================================
+// description returns the optional description of a Symbol Object.
+
+// const me = Symbol("Alberto");
+// console.log(me.description);
+// console.log(me.toString());
