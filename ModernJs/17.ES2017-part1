@@ -1,0 +1,65 @@
+//================================================
+// 1) String padding .paddStart() and .paddEnd()
+//================================================
+
+// var padd1 = "hello".padStart(10) + "Bla Bla";
+// console.log(padd1);
+// "hello"
+
+// "hello".padEnd(6);
+// "hello"
+
+//====================================================
+// 2) Right Align with padStart
+//====================================================
+
+// const strings = ["short", "medium length", "very long string"];
+// const longestString = strings.sort(str => str.length).map(str => str.length)[0];
+// strings.forEach(str => console.log(str.padStart(longestString)));
+
+//==========================================================
+// 3) Add a custom value to padding
+//==========================================================
+
+// console.log("hello".padEnd(13, "Alberto"));
+// "hello Alberto"
+// console.log("1".padStart(3, 0));
+// console.log("99".padStart(3, 0));
+
+//======================================================
+// 4) Object.entries() && Object.values()
+//======================================================
+
+// const family = {
+//   father: "Jonathan Kent",
+//   mother: "Martha Kent",
+//   son: "Clark Kent"
+// };
+
+// const familyArrayKeys = Object.keys(family);
+// console.log(familyArrayKeys);
+// const familyArrayValues = Object.values(family);
+// console.log(familyArrayValues);
+// const familyEntries = Object.entries(family);
+// console.log(familyEntries);
+
+//==========================================================
+// 5) Object.getOwnPropertyDescriptors()
+//=================================================
+
+// const myObj = {
+//   name: "Alberto",
+//   age: 25,
+//   greet() {
+//     console.log("hello");
+//   }
+// };
+
+// const prop = Object.getOwnPropertyDescriptors(myObj);
+// console.log(prop);
+
+//==========================================================
+// 6) Trailing commas in function parameter lists and calls
+//==========================================================
+
+
