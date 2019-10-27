@@ -1,0 +1,54 @@
+//==============================
+// 1) ES2018 Async Iteration and more?
+//==============================
+
+// const veggie = ["tomato","cucumber","beans"];
+// const meat = ["pork","beef","chicken"];
+
+// const menu = [...veggie, "pasta", ...meat];
+// console.log(menu);
+// Array [ "tomato", "cucumber", "beans", "pasta", "pork", "beef", "chicken" ]
+
+// let myObj = {
+//   a: 1,
+//   b: 3,
+//   c: 5,
+//   d: 8
+// };
+
+// // we use the rest operator to grab everything else left in the object.
+// let { a, b, ...z } = myObj;
+// console.log(a); // 1
+// console.log(b); // 3
+// console.log(z); // {c: 5, d: 8}
+
+//=======================================
+// 2) Asynchronous Iteration
+//======================================
+
+// for await (const line of readLines(filePath)){
+//     console.log(line);
+// }
+
+//================================
+// 3) Promise.prototype.finally()
+//================================
+
+// fetch("your-url")
+//   .then(result => {
+// do something with the result
+//   })
+//   .catch(error => {
+// do something with the error
+//   })
+//   .finally(()=> {
+// do something once the promise is finished
+//   })
+
+//====================================
+// 4) RegExp features
+//====================================
+
+// 1) s (dotAll) flag for regular expression
+
+/foo.bar/s.test("foo\nbar");
