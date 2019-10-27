@@ -1,0 +1,111 @@
+//================================
+// 1) Promises Review
+//================================
+
+// fetch a user from github
+
+// fetch("https://api.thedogapi.com/v1/breeds")
+//   .then(res => {
+//     // return the data in the json format
+//     console.log(res);
+//     return res.json();
+//   })
+//   .then(res => {
+//     // if everything went well, print the data
+//     console.log(res);
+//   })
+//   .catch(err => {
+//     // or print the error
+//     console.log(err);
+//   });
+
+// function walk(amount) {
+//   return new Promise((resolve, reject) => {
+//     if (amount < 500) {
+//       reject("The value is too small");
+//     }
+//     setTimeout(() => {
+//       resolve(`You walked fro ${amount} ms`);
+//     }, amount);
+//   });
+// }
+
+// walk(1000)
+//   .then(res => {
+//     console.log(res);
+//     return walk(500);
+//   })
+//   .then(res => {
+//     console.log(res);
+//     return walk(700);
+//   })
+//   .then(res => {
+//     console.log(res);
+//     return walk(800);
+//   })
+//   .then(res => {
+//     console.log(res);
+//     return walk(100);
+//   })
+//   .then(res => {
+//     console.log(res);
+//     return walk(400);
+//   })
+//   .then(res => {
+//     console.log(res);
+//     return walk(600);
+//   });
+
+//=================================
+// 2) Async and Await
+//=================================
+
+// function walk(amount) {
+//   return new Promise((resolve, reject) => {
+//     if (amount < 500) {
+//       reject("the value is too small");
+//     }
+//     setTimeout(() => resolve(`you walked for ${amount}ms`), amount);
+//   });
+// }
+
+// async function go() {
+// use the keyword await to wait for the response
+// use the keyword `await` to wait for the response
+//   const res = await walk(500);
+//   console.log(res);
+//   const res2 = await walk(900);
+//   console.log(res2);
+//   const res3 = await walk(600);
+//   console.log(res3);
+//   const res4 = await walk(700);
+//   console.log(res4);
+//   const res5 = await walk(400);
+//   console.log(res5);
+//   console.log("finished");
+// }
+// go();
+//==============================
+// 3) Error Handling
+//==============================
+
+// async function asyncFunc() {
+
+//     try {
+//       let response = await fetch('http:your-url');
+//       } catch(err) {
+//           console.log(err);
+//         }
+//   }
+
+//   asyncFunc();
+// TypeError: failed to fetch
+
+// async function asyncFunc(){
+//     let response = await fetch('http:your-url');
+//   }
+//   asyncFunc();
+// Uncaught (in promise) TypeError: Failed to fetch
+
+//   asyncFunc().catch(console.log);
+// TypeError: Failed to fetch
