@@ -1,0 +1,82 @@
+// 1)Linear Search Algorithm
+
+// function LinearSearch(arr, val) {
+//   return arr.indexOf(val);
+// }
+
+// function LinearSearchOne(arr, val) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === val) return i;
+//   }
+//   return -1;
+// }
+
+// console.log(LinearSearch([21, 23, 34, 56, 45], 2));
+// console.log(LinearSearch([10, 15, 20, 25, 30], 15));
+// console.log(LinearSearch([9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 4));
+// console.log(LinearSearchOne([9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 4));
+
+// 2)Binary Search
+// Works only on sorted arrays
+// A) Solution
+// function binarySearch(arrSorted, val) {
+//   if (val > arrSorted[arrSorted.length - 1]) return -1;
+//   if (val < arrSorted[0]) return -1;
+
+//   let left = 0;
+//   let right = arrSorted.length - 1;
+//   let middle = Math.floor((left + right) / 2);
+
+//   while (arrSorted[middle] !== val) {
+//     if (val < arrSorted[middle]) {
+//       right = middle - 1;
+//     } else {
+//       left = middle + 1;
+//     }
+//     middle = Math.floor((left + right) / 2);
+//   }
+//   return middle;
+// }
+
+// B) Solution
+
+// function binarySearch(arr, el) {
+//   let start = 0;
+//   let end = arr.length - 1;
+//   let middle = Math.floor((start + end) / 2);
+//   while (arr[middle] !== el && start <= end) {
+//     if (el < arr[middle]) end = middle - 1;
+//     else {
+//       start = middle + 1;
+//     }
+//     middle = Math.floor((start + end) / 2);
+//   }
+//   return arr[middle] === el ? middle : -1;
+// }
+
+// console.log(binarySearch([1, 2, 3, 4, 5], 2));
+// console.log(binarySearch([1, 2, 3, 4, 5], 3));
+// console.log(binarySearch([1, 2, 3, 4, 5], 5));
+// console.log(binarySearch([1, 2, 3, 4, 5], 6));
+// console.log(binarySearch([1, 2, 3, 4, 5], -6));
+
+// 2) Native Search String
+
+function stringSearch(str, search) {
+  let counter = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < search.length; j++) {
+      if (str[i + j] !== search[j]) break;
+      if (j === search.length - 1) counter++;
+    }
+  }
+  return counter;
+}
+
+console.log(stringSearch("lolie loled", "lol"));
+console.log(
+  stringSearch(
+    "Quisque auctor venenatis diam, eget consequat enim gravida in. Maecenas suscipit metus urna, at dapibus justo pharetra ut. Sed sapien odio, tempus eu sem sed, semper volutpat leo. Etiam non lorem sed lacus suscipit tristique. Duis fermentum id tortor eget malesuada. Sed fermentum mollis ante ac cursus. Ut sagittis feugiat pretium. Sed mollis, ante semper tempus aliquam, ex dolor tincidunt velit, at faucibus nunc magna sed lorem. Morbi tempor vitae urna eget dictum. Etiam bibendum turpis eget dignissim pretium. Maecenas a finibus ante. Nunc tellus lorem, venenatis ut bibendum eu, commodo sit amet nibh. Praesent imperdiet non risus quis malesuada. Nulla ligula ligula, gravida eget massa at, varius auctor massa. Donec euismod aliquet pellentesque.",
+    "m"
+  )
+);
