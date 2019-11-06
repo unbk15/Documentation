@@ -1,0 +1,40 @@
+// 1) Implement Bubble Sort
+
+// function swap(arr) {
+//   let noSwaps;
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     noSwaps = true;
+//     for (let j = 0; j < i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//         noSwaps = false;
+//       }
+//     }
+//     if (noSwaps) break;
+//   }
+//   return arr;
+// }
+
+// console.log(
+//   swap([
+//     78,
+//     21,
+//     23,
+//     12,
+//     34,
+//     56,
+//     11,
+//     10,
+//     60,
+//     45,
+//     240,
+//     3000,
+//     4343434,
+//     23,
+//     1,
+//     0,
+//     -23
+//   ])
+// );
