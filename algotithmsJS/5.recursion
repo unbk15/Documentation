@@ -1,0 +1,155 @@
+// 1) First Recursive Function
+
+// function countDown(num) {
+//   if (num <= 0) {
+//     console.log("All Done");
+//     return;
+//   }
+//   console.log(num);
+//   num--;
+//   countDown(num);
+// }
+// countDown(20);
+
+// 2) Second Recursive Function
+
+// function sumRange(num) {
+//   if (num === 1) return 1;
+//   return num + sumRange(num - 1);
+// }
+
+// console.log(sumRange(3));
+
+// 3) Factorial
+
+// function factorial(num) {
+//   let total = 1;
+//   for (let i = num; i > 1; i--) {
+//     total *= i;
+//   }
+// }
+
+// 4) Write factorial the recursive way
+
+// function factorial(num) {
+//   if (num === 1) return 1;
+//   return num * factorial(num - 1);
+// }
+
+// console.log(factorial(3));
+/// ==============================================
+// EXERCISES
+// ===============================================
+
+// 4)Power
+// Write a function called power which accepts a base and an exponent.The function should return the power of the base exponent/
+//  This function should mimic the functionality of Math.pow() - do not worry about negative bases and exponent.
+
+// function power(num, pow) {
+//   if (pow === 0) return 1;
+//   if (pow === 1) return num;
+//   return num * power(num, pow - 1);
+// }
+
+// console.log(power(2, 4));
+// console.log(power(2, 2));
+// console.log(power(2, 0));
+// console.log(power(5, 2));
+
+// 5) Write a function to return the factorial of that number.
+// A factorial is the product of an integer and all the integers below it,
+// Ex: 4! = 4 * 3 * 2 * 1;
+
+// function factorial(n) {
+//   if (n === 0) return 1;
+//   if (n === 1) return 1;
+//   return n * factorial(n - 1);
+// }
+
+// console.log(factorial(1));
+// console.log(factorial(2));
+// console.log(factorial(4));
+// console.log(factorial(7));
+
+// 6) Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
+
+// function productOfArray(arr) {
+//   let result = 1;
+
+//   function helper(helperInput) {
+//     if (helperInput.length === 0) {
+//       return null;
+//     }
+//     result *= helperInput[0];
+//     helper(helperInput.slice(1));
+//   }
+//   helper(arr);
+//   return result;
+// }
+
+// console.log(productOfArray([1, 2, 3]));
+// console.log(productOfArray([1, 2, 3, 10]));
+// console.log(productOfArray([78, 56, 12, 34, 14]));
+
+// 7) recursiveRange
+// Write a function called recursiveRange which acepts a number and adds up all the numbers from 0 to the number passed to the funtion
+
+// function recursiveRange(n) {
+//   let sum = 1;
+//   function rangeSum(val) {
+//     if (val === 1) return;
+//     sum += val;
+//     rangeSum(val - 1);
+//   }
+//   rangeSum(n);
+//   return sum;
+// }
+// console.log(recursiveRange(6));
+// console.log(recursiveRange(10));
+// console.log(recursiveRange(21));
+
+// 8) Write a recursive function called fib which accepts a number and returns the nth number in the Fibbonaci sequence.
+// Recall that the Fibonacci sequence of whole numbers 1, 1, 2, 3, 5 , 8 which starts with 1 and 1.
+// and where every number thereafter is equal to the sum of the prvious two numbers.
+
+// function fib(n) {
+//   if (n <= 2) return 1;
+//   return fib(n-1) + fib(n-2);
+// }
+
+// 9) Write a function called reverse which accepts a string and returns a new string in reverse;
+// function reverse(string) {
+//   if (!string) return "";
+//   return string.charAt(string.length - 1).concat(reverse(string.slice(0, -1)));
+// }
+
+// console.log(reverse("ABC"));
+// console.log(reverse("awesome")); // 'emosewa'
+// console.log(reverse("rithmschool")); // 'loohcsmhtir'
+
+// 10) Write a recursive function called is Palindrom which return true if the string passed to it is a palindrom otherwise return false;
+
+// function isPalindrome(str) {
+//   let revStr = "";
+//   function isPalindromInner(val) {
+//     if (!val) return;
+//     revStr += val.charAt(val.length - 1);
+//     isPalindromInner(val.slice(0, -1));
+//   }
+//   isPalindromInner(str);
+//   return revStr === str ? true : false;
+// }
+
+// console.log(isPalindrome("AnA"));
+// console.log(isPalindrome("awesome")); // false
+// console.log(isPalindrome("foobar")); // false
+// console.log(isPalindrome("tacocat")); // true
+// console.log(isPalindrome("amanaplanacanalpanama")); // true
+// console.log(isPalindrome("amanaplanacanalpandemonium")); // false
+
+// 11) some Recursive
+// Write a recursive function called some Recursive which accepts an array and a callback,
+// The function returns true if a single value in the array returns true when passed to the callback
+// Otherwise it returns false
+
+function someRecursive(arr, isOdd) {}
