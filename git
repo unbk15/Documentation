@@ -1,0 +1,52 @@
+https://innerjoiner.com/guide/git-team-workflow-cheatsheet/
+vim commands: 
+- press i to start entering text 
+- save by pressing esc 
+- and :wq and enter, this will commit with the message you typed.
+- :q just come out without committing.
+
+Step 1: Create a new branch to work on
+
+# Create a new feature branch
+git branch jc_new_feature
+# Checkout your new feature branch
+git checkout jc_new_feature
+
+Step 2: Write some code, commit regularly
+
+# Add all files to the stage
+git add .
+# Commit files 
+git commit -m "Description of this commit"
+# Optional (but recommended) push local branch to remote
+git push origin jc_feature_name
+
+Step 3: Fetch when you're done
+
+When you're ready to merge your features back into the master branch, run git fetch. 
+git fetch
+
+Step 4: Squash your commits and get ready to merge
+
+# Open the interactive rebase tool
+git rebase -i origin/master
+
+This will open an interactive rebase tool, which shows all the commits you've made on your branch. You'll then "squash" all your changes into one commit.
+To do this, replace pick with s for all but the top commit. s is shorthand for squash - imagine all the changes you've made being "squashed" up into the top commit. 
+
+Step 5. Merge your changes
+
+# Checkout the master branch
+git checkout master
+# Merge jc_feature_name INTO master
+git merge jc_feature_name
+
+# Push your local master branch to remote 
+git push origin master
+
+Step 6. Cleanup
+
+# Delete remote feature branch (the colon is important!)
+git push origin :jc_feature_name
+# Delete local branch
+git branch -d jc_feature_name
