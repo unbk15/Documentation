@@ -3,3 +3,4 @@ Package to intall for an express app.
 ====================================================
 
 1.nodemon --save-dev
+2.body-parser --save
