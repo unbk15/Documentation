@@ -6,3 +6,4 @@ Package to intall for an express app.
 2.body-parser --save
 3.uuid --save
 4.google geocoding api
+5.mongoose-unique-validator --save
