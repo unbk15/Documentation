@@ -7,3 +7,6 @@ Package to intall for an express app.
 3.uuid --save
 4.google geocoding api
 5.mongoose-unique-validator --save
+6.Authentification: 
+bcryptjs --save
+jsonwebtoken --save
