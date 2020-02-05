@@ -1,1 +1,6 @@
 
+BACKEND SETUP
+
+1.npm int
+2.npm i express
+3.npm i nodemon
