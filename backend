@@ -4,3 +4,8 @@ BACKEND SETUP
 1.npm int
 2.npm i express
 3.npm i nodemon
+5.npm i body-parser
+6.npm i express-validator
+7.npm i multer
+8.npm i uuid
+9.npm i sharp
