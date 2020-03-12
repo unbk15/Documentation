@@ -1,0 +1,29 @@
+1.Variable names should be nouns, such as "car" or "person".
+2.Function names should begin with a verb, such as getName(). Functions that return Boolean
+values typically begin with is, as in isEnabled().
+3.Variables, functions, and methods should begin with a lowercase letter and camelCase, such
+as getName() and isPerson. Classes like Person and RequestFactory should be capitalized. Constant values should be all uppercase and underscores, such as REQUEST_TIMEOUT.
+4.Be descriptive and sensible with names, but not too verbose. getName() intuitively will
+return a name value. PersonFactory will be producing some sort of Person object or entity.
+5.// Hungarian notation used to indicate data type
+let bFound; // Boolean
+let iCount; // integer
+let sName; // string
+let oPerson; // object
+6.// type comments used to indicate type
+let found /*:Boolean*/ = false;
+let count /*:int*/ = 10;
+let name /*:String*/ = "Nicholas";
+let person /*:Object*/ = null;
+7.If the value should be a reference type, use the instanceof operator to check its
+constructor.
+8.If the value should be a primitive type, use the typeof operator to check its type
+9.If you’re expecting an object with a specific method name, use the typeof operator to
+ensure that a method with the given name exists on the object
+10.Multiple Variable Declarations
+// one statement
+let count = 5,
+ color = "blue",
+Performance ❘ 1055
+ values = [1,2,3],
+ now = new Date();
