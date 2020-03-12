@@ -27,3 +27,15 @@ let count = 5,
 Performance ❘ 1055
  values = [1,2,3],
  now = new Date();
+ 11.When Updateing the DOM, considering using the Fragment
+ let list = document.getElementById("myList"),
+ fragment = document.createDocumentFragment(),
+ item;
+
+for (let i = 0; i < 10; i++) {
+ item = document.createElement("li");
+ fragment.appendChild(item);
+ item.appendChild(document.createTextNode("Item " + i));
+}
+
+list.appendChild(fragment);
