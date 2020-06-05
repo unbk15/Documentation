@@ -14,3 +14,23 @@ REDUX
 
 1.npm install redux
 2.npm i react-redux
+
+====================================================================================================
+RECAP
+====================================================================================================
+React Lifecicle 
+
+-getSnapshopBeforeUpdate(good for scroling back)
+-shouldComponentUpate(to block update - return true or false)
+-can useEffect many times
+-React.memo(should component update in react functional component)
+-Pure Component (check for props changing);
+-When your state depend on the old state, use a callback function to updatet the state
+-Using Props Type is a good option to check the type of props by installing --save prop-types
+- ref={(inputEl)=>{this.inputElement = inputEl}}
+- constructor(){
+  this.inputElementRef = React.createRef();
+}
+<input
+ ref={this.inputElementRef}
+/>
