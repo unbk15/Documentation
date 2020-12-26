@@ -81,3 +81,9 @@ Step 6. Cleanup
 git push origin :jc_feature_name
 # Delete local branch
 git branch -d jc_feature_name
+
+=======================================
+MOSH
+=======================================
+
+git remote prune origin (remove a remote branch locally if the branch was deleted from the github)
